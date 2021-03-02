@@ -3,22 +3,27 @@
 
 <body>
   <div id="root"></div>
+  <div id="root2"></div>
+  <div id="root3"></div>
+  <div id="root4"></div>
+  
   <script src="https://unpkg.com/react@17.0.0/umd/react.development.js"></script>
   <script src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.development.js"></script>
 
-  <!-- 💣 remove this line
+  
   <script src="https://unpkg.com/@babel/standalone@7.12.4/babel.js"></script>
-  💣 remove this line -->
+  
 
-  <script type="module">
+  <script type="text/babel">
     // 🐨 on the script tag above, change `type="module"`
     // to `type="text/babel"` so babel will compile this code for the browser to run.
 
     // 🐨 re-implement this using JSX!
     const element = React.createElement('div', {
       className: 'container',
-      children: 'Hello World',
+      children: 'Hello World!',
     })
+    ReactDOM.render(element, document.getElementById('root'))
 
     // 💰 there are a few subtle differences between JSX and HTML. One such
     // difference is how you apply a class to an element in JSX is by using
@@ -26,6 +31,24 @@
     // 📜 You can learn the differences between JSX and HTML syntax from the React docs here:
     // https://reactjs.org/docs/dom-elements.html#differences-in-attributes
 
-    ReactDOM.render(element, document.getElementById('root'))
+
+    // Utilizando JSX
+    const element2 = <div className = 'container'>Hello World!!</div>
+    ReactDOM.render(element2, document.getElementById('root2'))
+
+    // Crédito extra utilizando interpolação em JSX
+    const classe = 'container2'
+    const conteudo = 'Hello World!!!'
+    const element3 = <div className = {classe}>{conteudo}</div> // interpolação em JSX não utiliza $
+    ReactDOM.render(element3, document.getElementById('root3'))
+
+    // Utilizando o JSX com espalhamento
+    const className4 = 'container'
+    const children = 'Hello World!!!!!'
+    const props = {className4, children}
+    const element4 = <div {...props}></div>
+    ReactDOM.render(element4, document.getElementById('root4'))
+
+
   </script>
 </body>
