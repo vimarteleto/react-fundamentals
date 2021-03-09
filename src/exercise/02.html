@@ -53,9 +53,13 @@
     ReactDOM.render(element2, rootElement2)
 
 
-    
+    // Criando mais uma div com elemento.
+    let root3 = document.createElement('section') //criando a section root3
+    root3.id = 'root34'
+    document.body.append(root3) // append no body
 
-
+    let element3 = React.createElement('section', {className: 'container'}, 'Teste 3')
+    ReactDOM.render(element3, root3); // renderizar o elemento element3 na div root3
 
   </script>
 </body>
