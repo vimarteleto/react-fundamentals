@@ -47,8 +47,28 @@
       )
     }
 
-    const element3 = (
+    // retorno da função dentro de um elemento
+    function Soma({num1, num2}) {
+      return <div>O resultado é {num1 + num2}</div>
+    }
+
+    // <React.Fragment> consegue retornar mais de um elemento nas funções
+    // podemos escrever apenas com <> </>
+    function Soma2({num1, num2}) {
+      return (
+        <>
+          <p>O resultado é </p>
+          <div>{num1 + num2}</div>
+        </>
+      )
+    }
+
+
+    const element = (
       <div className="container">
+        {/* Quando for necessário passar props cujo valor não seja string,
+        é necessário passar o valor entre chaves*/}
+        <Soma2 num1={100} num2={200}/>
         <Message greeting="Hello" subject="World!!!"/>
         <Message greeting="Goodbye" subject="World!!!" />
       </div>
