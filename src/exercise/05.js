@@ -1,7 +1,7 @@
 // Styling
 // http://localhost:3000/isolated/exercise/05.js
 
-import { italic } from 'chalk'
+//import { italic } from 'chalk'
 import * as React from 'react'
 import '../box-styles.css'
 
