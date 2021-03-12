@@ -22,7 +22,7 @@ const largeBox = <div className="box box--large" style={{backgroundColor: "orang
 
 function Box({color = 'red', style = {}, size = 'medium', ...props}) {
   const className = "box box--" + size
-  return <div className={className} style={{fontStyle: "italic", backgroundColor: color, ...style}} {...props}></div>
+  return <div className={className} style={{fontStyle: "italic", backgroundColor: color, ...style}} {...props}/>
 }
 
 function App() {
