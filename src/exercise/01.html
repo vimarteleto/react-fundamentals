@@ -25,11 +25,11 @@
 </head>
 <body>    
     <script type="module">
-        var root = document.createElement('div') // criando o div root
+        let root = document.createElement('div') // criando o div root
         root.id = 'root' // id='root'
         document.body.append(root) // append do div root no body (necessário)
 
-        var div = document.createElement('div') // criando a div
+        let div = document.createElement('div') // criando a div
         div.textContent = "Hello Word!!" // texto da div criada
         div.className = 'container' // class da div criada
         document.querySelector('#root').append(div) // append da div criada na div root
