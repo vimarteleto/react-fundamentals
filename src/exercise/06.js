@@ -32,9 +32,10 @@ function UsernameForm({onSubmitUsername}) {
 
   function handleSubmit(event) {
     event.preventDefault() // previne o recarregamento do formulário  
-    //const username = document.querySelector('#username').value  
-    
-    const username = usernameEl.current.value
+    //const username = document.querySelector('#username').value
+
+    //const username = usernameEl.current.value;
+    const {value: username} = usernameEl.current;
     onSubmitUsername(username)  
   }  
 }
